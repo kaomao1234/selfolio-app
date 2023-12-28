@@ -26,14 +26,19 @@ export default function Landing() {
             </button>
         </div>
         <div id="body" className="flex flex-col mt-[102px]">
-            <div className="flex flex-col mt-[29px] mx-[42.3px] items-center">
-                <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1703673304~exp=1703673904~hmac=58ea8c7089d2e6da811da10a3657b4105b25a24316df5ad52e93b644436990f5" className="rounded-full"></img>
-                <label className="text-neutral-900 text-base font-normal mt-[63.27px] mb-[12.5px]">DEVELOPER</label>
-                <label className="text-indigo-700 text-4xl font-semibold">Erica Font</label>
-                <label className="text-center text-neutral-800 text-base font-normal my-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt.</label>
-                <button className="w-28 px-5 py-3 bg-indigo-700 rounded-md justify-center items-center btn border-none hover:bg-indigo-700">
-                    <div className="text-center text-cyan-100 text-base">Contact</div>
-                </button>
+            <div className="flex flex-col md:flex-row-reverse mt-[29px] mx-[42.3px] items-center">
+                <div className="mx-14 flex">
+                    <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1703673304~exp=1703673904~hmac=58ea8c7089d2e6da811da10a3657b4105b25a24316df5ad52e93b644436990f5" className="rounded-full "></img>
+                </div>
+                <div className="flex flex-col md:flex-row flex-wrap items-center md:justify-start">
+                    <label className="text-neutral-900 text-base font-normal mt-[63.27px] mb-[12.5px] md:w-full">DEVELOPER</label>
+                    <p className="text-indigo-700 text-4xl font-semibold">Erica Font</p>
+                    <label className="text-center text-neutral-800 text-base font-normal my-4 md:text-left">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt.</label>
+                    <button className="w-28 px-5 py-3 bg-indigo-700 rounded-md justify-center items-center btn border-none hover:bg-indigo-700">
+                        <div className="text-center text-cyan-100 text-base">Contact</div>
+                    </button>
+                </div>
+
             </div>
 
             <div className="flex flex-col px-[22px] mt-[72px]">
@@ -57,10 +62,10 @@ export default function Landing() {
             </div>
             <div className="mt-[105.05px] mx-[27px]">
                 <label className="text-neutral-900 text-2xl font-semibold">Skills</label>
-                <div className="grid grid-cols-3 gap-x-12 gap-y-20 mt-[46.4px]">
+                <div className="grid grid-cols-3 gap-x-12 gap-y-20 mt-[46.4px] grow">
                     {
-                        viewmodel.skills.map((val,index)=><div className="flex flex-col w-fit items-center">
-                                {val.icon}
+                        viewmodel.skills.map((val, index) => <div className="flex flex-col w-full items-center">
+                            {val.icon}
                             <label className="text-neutral-800 text-xs uppercase">{val.name}</label>
                         </div>)
                     }
