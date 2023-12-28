@@ -62,7 +62,7 @@ export default function Landing() {
             </div>
             <div className="mt-[105.05px] mx-[27px]">
                 <label className="text-neutral-900 text-2xl font-semibold">Skills</label>
-                <div className="grid grid-cols-3 gap-x-12 gap-y-20 mt-[46.4px] grow">
+                <div className="grid grid-cols-3 md:grid-cols-5 gap-x-12 gap-y-20 mt-[46.4px] grow">
                     {
                         viewmodel.skills.map((val, index) => <div className="flex flex-col w-full items-center">
                             {val.icon}
