@@ -1,5 +1,7 @@
+import { FlutterIcon } from "@/assets/icon";
 import { ProjectItemCard } from "@/components";
-
+import { LandingViewModel } from "@/viewmodels";
+const viewmodel = new LandingViewModel()
 export default function Landing() {
     return <div className="flex flex-col w-full min-h-screen bg-neutral-50">
         <div id="navbar" className="lg:h-[100px] fixed flex flex-row w-full items-center justify-center px-6 lg:px-0 py-[27px] bg-neutral-50">
@@ -55,7 +57,14 @@ export default function Landing() {
             </div>
             <div className="mt-[105.05px] mx-[27px]">
                 <label className="text-neutral-900 text-2xl font-semibold">Skills</label>
-                <div className="grid grid-cols-3 gap-x-12 gap-y-20"></div>
+                <div className="grid grid-cols-3 gap-x-12 gap-y-20 mt-[46.4px]">
+                    {
+                        viewmodel.skills.map((val,index)=><div className="flex flex-col w-fit items-center">
+                                {val.icon}
+                            <label className="text-neutral-800 text-xs uppercase">{val.name}</label>
+                        </div>)
+                    }
+                </div>
             </div>
         </div>
     </div>
