@@ -1,3 +1,5 @@
+import { ProjectItemCard } from "@/components";
+
 export default function Landing() {
     return <div className="flex flex-col w-full min-h-screen bg-neutral-50">
         <div id="navbar" className="lg:h-[100px] fixed flex flex-row w-full items-center justify-center px-6 lg:px-0 py-[27px] bg-neutral-50">
@@ -40,16 +42,21 @@ export default function Landing() {
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem accusamus eaque iste dolor tempore rerum temporibus at esse commodi corporis dolores necessitatibus assumenda excepturi tempora accusantium enim dolorem ipsam possimus eum alias quibusdam nesciunt, consequatur atque. Sed, dolorem tempore ipsam nam facilis voluptates aliquid omnis rem accusantium, a at? Nobis, nam at sed natus asperiores quos nostrum, earum labore magni aliquam cumque unde officiis ex. Ducimus, fugiat ea consectetur suscipit doloremque hic recusandae adipisci nesciunt temporibus id dolor molestias aliquid beatae iusto veritatis debitis sunt similique reprehenderit! Nisi totam nam accusantium doloribus aspernatur cum. Eius mollitia iure accusamus animi. Dolorem.</label>
                 </div>
             </div>
-            <div className="mt-[72px] px-[22px]">
-                <div className="text-neutral-900 text-2xl font-semibold mb-8">Projects</div>
-                <div className="flex flex-col gap-4">
-                    
-                    <button className="btn border-none h-14 px-5 bg-indigo-700 py-3 hover:bg-indigo-700 rounded-md justify-center items-center flex mx-[22.4px]">
-                        <label className="text-center text-cyan-100 text-base font-medium ">SEE ALL PROJECTS</label>
-                    </button>
+            <div className="mt-[72px] mx-[25.2px] flex flex-col">
+                <div className="text-neutral-900 text-2xl font-semibold mb-8 ">Projects</div>
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 flex-wrap gap-4 justify-center">
+                    <ProjectItemCard />
+                    <ProjectItemCard />
+                    <ProjectItemCard />
                 </div>
+                <button className="btn border-none h-14 px-5 bg-indigo-700 py-3 hover:bg-indigo-700 rounded-md justify-center items-center flex mx-[22.4px] mt-4">
+                    <label className="text-center text-cyan-100 text-base font-medium ">SEE ALL PROJECTS</label>
+                </button>
             </div>
-            <div></div>
+            <div className="mt-[105.05px] mx-[27px]">
+                <label className="text-neutral-900 text-2xl font-semibold">Skills</label>
+                <div className="grid grid-cols-3 gap-x-12 gap-y-20"></div>
+            </div>
         </div>
     </div>
 }
