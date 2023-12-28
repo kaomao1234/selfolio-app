@@ -1,8 +1,8 @@
 export default function Landing() {
     return <div className="flex flex-col w-full min-h-screen bg-neutral-50">
         <div id="navbar" className="lg:h-[100px] fixed flex flex-row w-full items-center justify-center px-6 lg:px-0 py-[27px] bg-neutral-50">
-            <div className='group flex flex-col lg:mr-[748px] md:mr-0 mr-auto'>
-                <button className="group text-neutral-800 text-base font-medium h-fit px-2">
+            <div className='group flex flex-col lg:mr-[748px] mr-auto'>
+                <button className="group-focus-within:text-indigo-700 ease-out duration-200 text-neutral-800 text-base font-medium h-fit px-2">
                     Home
                 </button>
                 <div className='ml-[50%] group-focus-within:ml-0
@@ -10,7 +10,7 @@ export default function Landing() {
                 group-focus-within:bg-indigo-700 h-[3px] ease-out duration-200 w-0'></div>
             </div>
             <div className='group flex flex-col lg:mr-[107px] mr-8'>
-                <button className="group text-neutral-800 text-base font-medium h-fit px-2">
+                <button className="group text-neutral-800 text-base font-medium h-fit px-2 group-focus-within:text-indigo-700 ease-out duration-200">
                     Project
                 </button>
                 <div className='ml-[50%] group-focus-within:ml-0
@@ -43,9 +43,10 @@ export default function Landing() {
             <div className="mt-[72px] px-[22px]">
                 <div className="text-neutral-900 text-2xl font-semibold mb-8">Projects</div>
                 <div className="flex flex-col gap-4">
-                    <div className="btn border-none h-14 px-5 bg-indigo-700 py-3 hover:bg-indigo-700 rounded-md justify-center items-center flex mx-[22.4px]">
+                    
+                    <button className="btn border-none h-14 px-5 bg-indigo-700 py-3 hover:bg-indigo-700 rounded-md justify-center items-center flex mx-[22.4px]">
                         <label className="text-center text-cyan-100 text-base font-medium ">SEE ALL PROJECTS</label>
-                    </div>
+                    </button>
                 </div>
             </div>
             <div></div>
