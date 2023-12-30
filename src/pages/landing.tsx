@@ -1,12 +1,13 @@
 import { FlutterIcon } from "@/assets/icon";
 import { ProjectItemCard } from "@/components";
 import { LandingViewModel } from "@/viewmodels";
+import Image from "next/image";
 import { FaArrowDown, FaGithub } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 const viewmodel = new LandingViewModel()
 export default function Landing() {
     return <div className="flex flex-col w-full min-h-screen bg-neutral-50">
-        <div id="navbar" className="md:h-[100px] fixed flex flex-row w-full items-center justify-center py-[27px] bg-neutral-50 px-16">
+        <div id="navbar" className="md:h-[100px] fixed flex flex-row w-full items-center justify-center py-[27px] bg-neutral-50 md:px-16 px-4">
             <div className='group flex flex-col mr-auto' tabIndex={0}>
                 <button className="group-focus-within:text-indigo-700 ease-out duration-200 text-neutral-800 text-base font-medium h-fit px-2">
                     Home
@@ -31,7 +32,7 @@ export default function Landing() {
             <div className="flex flex-col">
                 <div className="flex flex-col md:flex-row-reverse mt-[29px] mx-[42.3px] items-center">
                     <div className="mx-14 flex">
-                        <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1703673304~exp=1703673904~hmac=58ea8c7089d2e6da811da10a3657b4105b25a24316df5ad52e93b644436990f5" className="rounded-full "></img>
+                        <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1703673304~exp=1703673904~hmac=58ea8c7089d2e6da811da10a3657b4105b25a24316df5ad52e93b644436990f5" alt="" className="rounded-full size-full" width={100} height={100}></img>
                     </div>
                     <div className="flex flex-col md:flex-row flex-wrap items-center md:justify-start">
                         <label className="text-neutral-900 text-base font-normal mt-[63.27px] mb-[12.5px] md:w-full">DEVELOPER</label>
