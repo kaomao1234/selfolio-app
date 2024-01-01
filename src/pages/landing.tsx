@@ -1,5 +1,5 @@
 import { FlutterIcon } from "@/assets/icon";
-import { ProjectItemCard } from "@/components";
+import { Footer, Nav, ProjectItemCard } from "@/components";
 import { LandingViewModel } from "@/viewmodels";
 import { useRef } from "react";
 import { FaArrowDown, FaGithub } from "react-icons/fa6";
@@ -20,41 +20,10 @@ export default function Landing() {
   };
   return (
     <div className="flex min-h-screen w-full flex-col bg-neutral-50">
-      <nav
-        id="navbar"
-        className="flex w-full flex-row items-center justify-center bg-neutral-50 px-4 pt-5 md:fixed md:px-16 md:py-[20px]"
-      >
-        <div className="group mr-auto flex flex-col" tabIndex={0}>
-          <button className="h-fit bg-gradient-to-r from-pink-700 bg-clip-text px-2 text-base font-medium text-slate-800 duration-200 ease-out hover:to-indigo-700 hover:text-transparent group-focus-within:to-indigo-700 group-focus-within:text-transparent">
-            Home
-          </button>
-          <div
-            className="ml-[50%] h-[3px]
-                w-0
-                bg-gradient-to-r from-pink-700 duration-200 ease-out group-focus-within:ml-0 group-focus-within:w-full group-focus-within:to-indigo-700"
-          ></div>
-        </div>
-        <div className="group mr-8 flex flex-col lg:mr-[107px]" tabIndex={0}>
-          <button className="group h-fit bg-gradient-to-r from-pink-700 bg-clip-text px-2 text-base font-medium text-neutral-800 duration-200 ease-out hover:to-indigo-700 hover:text-transparent group-focus-within:to-indigo-700 group-focus-within:text-transparent">
-            Project
-          </button>
-          <div
-            className="ml-[50%] h-[3px]
-                w-0
-                bg-gradient-to-r 
-                from-pink-700 duration-200 ease-out group-focus-within:ml-0 group-focus-within:w-full group-focus-within:to-indigo-700"
-          ></div>
-        </div>
-        <button
-          className="btn w-28 items-center justify-center rounded-md border-none bg-gradient-to-r from-pink-700 to-indigo-700 px-5 py-3 shadow-lg duration-200 ease-out hover:shadow-indigo-700/50"
-          tabIndex={0}
-        >
-          <div className="text-center text-base text-white">Contract</div>
-        </button>
-      </nav>
+      <Nav></Nav>
       <div
         id="body"
-        className="flex flex-col pt-[102px] md:ml-[60px] md:mr-[40px]"
+        className="flex flex-col pt-[67px] md:ml-[60px] md:mr-[40px] md:pt-[77px]"
       >
         <div className="flex flex-col">
           <div className="mx-[42.3px] mt-[29px] flex flex-col items-center md:flex-row-reverse">
@@ -88,7 +57,7 @@ export default function Landing() {
             </div>
           </div>
           <div className="mt-4 hidden h-10 w-full items-center justify-center md:mt-[60px] md:flex">
-            <button onClick={onScrollClick}>
+            <button onClick={onScrollClick} className="hover:animate-bounce">
               <FaArrowDown className="size-7 text-indigo-700" />
             </button>
           </div>
@@ -147,16 +116,7 @@ export default function Landing() {
           </div>
         </div>
       </div>
-      <footer className="animate__animated animate__bounce mt-9 flex flex-col items-center justify-center bg-gradient-to-r from-pink-700 to-indigo-700 px-10 py-5">
-        <div className="flex w-full flex-row justify-center gap-10">
-          <button>
-            <SiGmail className="size-10 text-red-400" />
-          </button>
-          <button>
-            <FaGithub className="size-10 text-black" />
-          </button>
-        </div>
-      </footer>
+      <Footer></Footer>
     </div>
   );
 }
