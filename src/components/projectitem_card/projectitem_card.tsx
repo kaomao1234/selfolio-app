@@ -8,14 +8,14 @@ interface props {
 }
 const ProjectItemCard: FC = () => {
   return (
-    <div className="flex flex-col overflow-hidden rounded-md bg-base-100 shadow-xl">
+     <button className="flex flex-col overflow-hidden rounded-md shadow-xl bg-slate-100 hover:bg-gray-300 ease-out duration-200 hover:-translate-y-2.5">
       <figure>
         <img
           src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
           alt="Shoes"
         />
       </figure>
-      <div className="flex flex-col bg-violet-50 px-[18px] py-4">
+      <div className="flex flex-col px-[18px] py-4 items-start text-start">
         <h2 className="text-xl font-semibold text-neutral-900">
           Title Project
         </h2>
@@ -27,13 +27,8 @@ const ProjectItemCard: FC = () => {
           ipsam similique voluptatum laudantium assumenda harum iusto debitis
           adipisci. Eum rem animi saepe magnam.
         </p>
-        <div className="card-actions justify-end">
-          <button className="btn items-center justify-center rounded-md border-none bg-gradient-to-r bg-left capitalize text-white duration-200 ease-out from-pink-700 to-indigo-700">
-            link
-          </button>
-        </div>
       </div>
-    </div>
+    </button>
   );
 };
 
