@@ -1,15 +1,28 @@
 import { FlutterIcon } from "@/assets/icon";
 import { ProjectItemCard } from "@/components";
 import { LandingViewModel } from "@/viewmodels";
+import { useRef } from "react";
 import { FaArrowDown, FaGithub } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 const viewmodel = new LandingViewModel();
 export default function Landing() {
+  const ref = useRef<HTMLDivElement>(null);
+  const onScrollClick = () => {
+    const viewportWidth = window.innerWidth;
+    var option: ScrollIntoViewOptions = {
+      behavior: "smooth",
+      block: "center",
+    };
+    if (viewportWidth < 768) {
+      option = { behavior: "smooth", block: "nearest" };
+    }
+    ref.current?.scrollIntoView(option);
+  };
   return (
     <div className="flex min-h-screen w-full flex-col bg-neutral-50">
-      <div
+      <nav
         id="navbar"
-        className="fixed flex w-full flex-row items-center justify-center bg-neutral-50 px-4 py-[27px] md:h-[100px] md:px-16"
+        className="flex w-full flex-row items-center justify-center bg-neutral-50 px-4 pt-5 md:fixed md:px-16 md:py-[20px]"
       >
         <div className="group mr-auto flex flex-col" tabIndex={0}>
           <button className="h-fit bg-gradient-to-r from-pink-700 bg-clip-text px-2 text-base font-medium text-slate-800 duration-200 ease-out hover:to-indigo-700 hover:text-transparent group-focus-within:to-indigo-700 group-focus-within:text-transparent">
@@ -38,10 +51,10 @@ export default function Landing() {
         >
           <div className="text-center text-base text-white">Contract</div>
         </button>
-      </div>
+      </nav>
       <div
         id="body"
-        className="mt-[102px] flex flex-col md:ml-[60px] md:mr-[40px]"
+        className="flex flex-col pt-[102px] md:ml-[60px] md:mr-[40px]"
       >
         <div className="flex flex-col">
           <div className="mx-[42.3px] mt-[29px] flex flex-col items-center md:flex-row-reverse">
@@ -75,10 +88,12 @@ export default function Landing() {
             </div>
           </div>
           <div className="mt-4 hidden h-10 w-full items-center justify-center md:mt-[60px] md:flex">
-            <FaArrowDown className="size-7 text-indigo-700" />
+            <button onClick={onScrollClick}>
+              <FaArrowDown className="size-7 text-indigo-700" />
+            </button>
           </div>
         </div>
-        <div className="mt-[72px] flex flex-col px-[22px]">
+        <div className="mt-[40px] flex flex-col px-[22px]">
           <label className="mb-5 text-2xl font-semibold text-neutral-900">
             About me
           </label>
@@ -100,7 +115,10 @@ export default function Landing() {
             </label>
           </div>
         </div>
-        <div className="mx-[25.2px] mt-[72px] flex flex-col items-center">
+        <div
+          className="mx-[25.2px] mt-[72px] flex flex-col items-center"
+          ref={ref}
+        >
           <div className="mb-8 w-full content-start text-2xl font-semibold text-neutral-900">
             Projects
           </div>
@@ -129,8 +147,8 @@ export default function Landing() {
           </div>
         </div>
       </div>
-      <footer className="flex flex-col items-center px-10 py-[90px]">
-        <div className="flex w-full flex-row justify-center gap-10 pb-9">
+      <footer className="animate__animated animate__bounce mt-9 flex flex-col items-center justify-center bg-gradient-to-r from-pink-700 to-indigo-700 px-10 py-5">
+        <div className="flex w-full flex-row justify-center gap-10">
           <button>
             <SiGmail className="size-10 text-red-400" />
           </button>
@@ -138,7 +156,6 @@ export default function Landing() {
             <FaGithub className="size-10 text-black" />
           </button>
         </div>
-        <label className="text-lg text-black">FrontEnd</label>
       </footer>
     </div>
   );
