@@ -1,11 +1,6 @@
 import { FC } from "react";
 
-interface props {
-  title: string;
-  imageUrl: string;
-  detail: string;
-  shortcuts: string;
-}
+
 const ProjectItemCard: FC = () => {
   return (
      <button className="flex flex-col overflow-hidden rounded-md shadow-xl bg-slate-100 hover:bg-gray-300 ease-out duration-200 hover:-translate-y-2.5">
