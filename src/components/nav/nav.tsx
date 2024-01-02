@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from "@/hook";
 import { useRouter } from "next/router";
 import { FC, ReactNode, RefObject, useEffect, useRef } from "react";
 
-const Nav = () => {
+const Nav:FC = () => {
   const router = useRouter();
   const onClick = (routing: string) => {
     router.push(`/${routing}`);
