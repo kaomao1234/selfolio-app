@@ -1,14 +1,16 @@
+import { Footer, Nav } from "@/components";
 import { createSlice } from "@reduxjs/toolkit";
 
+const state = {
+    
+};
 export const navBarManagementSlice = createSlice({
     name: "navbar_management",
-    initialState: "landing",
+    initialState: state,
     reducers: {
-        updateNavBarState: (state: string, action) => {
-            return action.payload;
-        }
+  
     }
 });
 
-export const { updateNavBarState } = navBarManagementSlice.actions;
+export const {  } = navBarManagementSlice.actions;
 export default navBarManagementSlice.reducer;
