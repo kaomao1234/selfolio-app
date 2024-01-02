@@ -1,11 +1,13 @@
 import { FlutterIcon } from "@/assets/icon";
 import { Footer, Nav, ProjectItemCard } from "@/components";
+import { useAppSelector } from "@/hook";
 import { LandingViewModel } from "@/viewmodels";
 import { useRef } from "react";
 import { FaArrowDown, FaGithub } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 const viewmodel = new LandingViewModel();
 export default function Landing() {
+  const selector = useAppSelector((state) => state.navBarManagement);
   const ref = useRef<HTMLDivElement>(null);
   const onScrollClick = () => {
     const viewportWidth = window.innerWidth;
@@ -19,8 +21,7 @@ export default function Landing() {
     ref.current?.scrollIntoView(option);
   };
   return (
-    <div className="flex min-h-screen w-full flex-col bg-neutral-50">
-      <Nav></Nav>
+    <div className="">
       <div
         id="body"
         className="flex flex-col pt-[67px] md:ml-[60px] md:mr-[40px] md:pt-[77px]"
@@ -116,7 +117,6 @@ export default function Landing() {
           </div>
         </div>
       </div>
-      <Footer></Footer>
     </div>
   );
 }
