@@ -19,11 +19,11 @@ export default function Landing() {
     ref.current?.scrollIntoView(option);
   };
   return (
-    <div className="px-20 lg:px-[190px] xl:px-[250px] w-full">
+    <div className="px-5 md:px-20 lg:px-[190px] xl:px-[250px] w-full">
       <div id="body" className="flex flex-col pt-[67px] md:pt-[77px]">
         <div className="flex flex-col">
           <div className="mt-[29px] flex flex-col items-center justify-center sm:mx-[42.3px] md:mx-0 md:flex-row-reverse">
-            <div className="flex h-full w-full max-md:px-14 max-sm:px-10 xl:px-14">
+            <div className="flex h-full w-ful sm:px-20 lg:px-14">
               <img
                 src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1703673304~exp=1703673904~hmac=58ea8c7089d2e6da811da10a3657b4105b25a24316df5ad52e93b644436990f5"
                 alt=""
