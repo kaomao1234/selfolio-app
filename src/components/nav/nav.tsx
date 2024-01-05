@@ -13,7 +13,7 @@ const Nav:FC = () => {
       className="flex w-full flex-row items-center bg-slate-50 px-8 py-5 md:px-16 md:py-[25px] fixed z-10"
     >
       <button
-        className="group mr-auto flex flex-col border-none"
+        className="group mr-auto flex flex-col outline-none"
         tabIndex={0}
         onClick={() => onClick("landing")}
       >
@@ -27,7 +27,7 @@ const Nav:FC = () => {
         ></div>
       </button>
       <button
-        className="group mr-8 flex flex-col border-none lg:mr-[107px]"
+        className="group mr-8 flex flex-col outline-none lg:mr-[107px]"
         tabIndex={0}
         onClick={() => onClick("project")}
       >
@@ -42,7 +42,7 @@ const Nav:FC = () => {
         ></div>
       </button>
       <button
-        className="group flex flex-col border-none"
+        className="group flex flex-col outline-none"
         tabIndex={0}
         onClick={() => onClick("contract")}
       >
