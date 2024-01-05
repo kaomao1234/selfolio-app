@@ -1,10 +1,8 @@
-import { FlutterIcon } from "@/assets/icon";
-import { Footer, Nav, ProjectItemCard } from "@/components";
+import { ProjectItemCard } from "@/components";
 import { useAppSelector } from "@/hook";
 import { LandingViewModel } from "@/viewmodels";
 import { useRef } from "react";
-import { FaArrowDown, FaGithub } from "react-icons/fa6";
-import { SiGmail } from "react-icons/si";
+import { FaArrowDown } from "react-icons/fa6";
 const viewmodel = new LandingViewModel();
 export default function Landing() {
   const selector = useAppSelector((state) => state.navBarManagement);
@@ -21,27 +19,24 @@ export default function Landing() {
     ref.current?.scrollIntoView(option);
   };
   return (
-    <div className="">
-      <div
-        id="body"
-        className="flex flex-col pt-[67px] md:ml-[60px] md:mr-[40px] md:pt-[77px]"
-      >
+    <div className="px-20 lg:px-[190px] xl:px-[250px] w-full">
+      <div id="body" className="flex flex-col pt-[67px] md:pt-[77px]">
         <div className="flex flex-col">
-          <div className="mx-[42.3px] mt-[29px] flex flex-col items-center md:flex-row-reverse">
-            <div className="mx-14 flex">
+          <div className="mt-[29px] flex flex-col items-center justify-center sm:mx-[42.3px] md:mx-0 md:flex-row-reverse">
+            <div className="flex h-full w-full max-md:px-14 max-sm:px-14 max-sm:px-10 xl:px-14">
               <img
                 src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1703673304~exp=1703673904~hmac=58ea8c7089d2e6da811da10a3657b4105b25a24316df5ad52e93b644436990f5"
                 alt=""
                 className="size-full rounded-full"
-                width={100}
-                height={100}
+                // width={100}
+                // height={100}
               ></img>
             </div>
             <div className="flex flex-col flex-wrap items-center md:flex-row md:justify-start">
               <label className="mb-[12.5px] mt-[63.27px] text-base font-normal text-neutral-900 md:w-full">
                 DEVELOPER
               </label>
-              <p className="bg-gradient-to-r from-pink-700 to-indigo-700 bg-clip-text text-4xl font-semibold text-transparent">
+              <p className="bg-gradient-to-r from-pink-700 to-indigo-700 bg-clip-text text-[55px] font-semibold text-transparent">
                 Erica Font
               </p>
               <label className="my-4 text-center text-base font-normal text-neutral-800 md:text-left">
@@ -57,18 +52,13 @@ export default function Landing() {
               </button>
             </div>
           </div>
-          <div className="mt-4 hidden h-10 w-full items-center justify-center md:mt-[60px] md:flex">
-            <button onClick={onScrollClick} className="hover:animate-bounce">
-              <FaArrowDown className="size-7 text-indigo-700" />
-            </button>
-          </div>
         </div>
-        <div className="mt-[40px] flex flex-col px-[22px]">
+        <div className="mt-[40px] flex flex-col px-[22px] md:mt-[200px]">
           <label className="mb-5 text-2xl font-semibold text-neutral-900">
             About me
           </label>
           <div className="flex flex-row gap-[17px]">
-            <div className="mt-[10px] h-[calc(100vh*0.2)] w-[40px] rounded-sm bg-gradient-to-b from-pink-700 to-indigo-700" />
+            <div className="mb-[10px] h-[calc(100vh*0.2)] w-[20px] rounded-md bg-gradient-to-b from-pink-700 to-indigo-700" />
             <label className="text-lg font-normal text-neutral-800">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
               accusamus eaque iste dolor tempore rerum temporibus at esse
@@ -86,7 +76,7 @@ export default function Landing() {
           </div>
         </div>
         <div
-          className="mx-[25.2px] mt-[72px] flex flex-col items-center"
+          className="mx-[25.2px] mt-[72px] flex flex-col items-center md:mt-[140px]"
           ref={ref}
         >
           <div className="mb-8 w-full content-start text-2xl font-semibold text-neutral-900">
@@ -105,11 +95,14 @@ export default function Landing() {
           <label className="text-2xl font-semibold text-neutral-900">
             Skills
           </label>
-          <div className="mt-[46.4px] grid grow grid-cols-3 gap-x-12 gap-y-20 md:grid-cols-5">
+          <div className="mt-[46.4px] flex flex-row flex-wrap justify-center md:gap-8">
             {viewmodel.skills.map((val, index) => (
-              <div key={index} className="flex w-full flex-col items-center">
+              <div
+                key={index}
+                className="flex flex-col items-center"
+              >
                 {val.icon}
-                <label className="text-xs uppercase text-neutral-800">
+                <label className="mt-5 text-xs uppercase text-neutral-800">
                   {val.name}
                 </label>
               </div>
