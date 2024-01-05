@@ -10,7 +10,7 @@ const Nav:FC = () => {
   return (
     <nav
       id="navbar"
-      className="flex w-full flex-row items-center bg-slate-50 px-8 py-5 md:fixed md:px-16 md:py-[25px]"
+      className="flex w-full flex-row items-center bg-slate-50 px-8 py-5 md:px-16 md:py-[25px] fixed z-10"
     >
       <button
         className="group mr-auto flex flex-col border-none"
