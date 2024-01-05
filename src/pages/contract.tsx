@@ -3,7 +3,7 @@ import { useAppSelector } from "@/hook";
 
 export default function Contract() {
   return (
-    <div className="flex w-full flex-col items-center pt-[20px] md:pt-[77px]">
+    <div className="flex w-full flex-col items-center pt-[20px] md:pt-[77px] grow">
       <form
         className="flex w-full flex-col gap-4 px-[10%]
       md:px-[30%]"
