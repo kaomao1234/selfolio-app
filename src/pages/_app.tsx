@@ -1,7 +1,6 @@
 import { Footer, Nav } from "@/components";
 import { store } from "@/store/store";
 import "@/styles/globals.css";
-import "@/styles/landing.css";
 import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
 
